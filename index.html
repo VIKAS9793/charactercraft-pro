@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CharacterCraft Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lexend:wght@600;700&display=swap" rel="stylesheet">
+  
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1"
+  }
+}
+</script>
+
+  <style>
+    :root {
+      /* Default (Light) Theme */
+      --color-text: #1a1a1a;
+      --color-text-dim: #5c5c5c;
+      --color-bg: #f5f5f5;
+      --color-surface: #ffffff;
+      --color-surface-light: #f0f0f0;
+      --color-border: #dcdcdc;
+      --color-focus: #4f46e5; /* Indigo-600 */
+      
+      /* Accent Colors */
+      --color-accent-primary-val: 99 102 241;   /* indigo-500 */
+      --color-accent-secondary-val: 236 72 153; /* pink-500 */
+      --color-accent-cta-val: 20 184 166;      /* teal-500 */
+      --color-accent-cta-hover-val: 15 118 110;  /* teal-700 */
+      --color-accent-danger-val: 239 68 68; /* red-500 */
+      --color-accent-danger-hover-val: 185 28 28; /* red-700 */
+
+      --color-accent-primary: rgb(var(--color-accent-primary-val));
+      --color-accent-secondary: rgb(var(--color-accent-secondary-val));
+      --color-accent-cta: rgb(var(--color-accent-cta-val));
+      --color-accent-cta-hover: rgb(var(--color-accent-cta-hover-val));
+      --color-accent-danger: rgb(var(--color-accent-danger-val));
+      --color-accent-danger-hover: rgb(var(--color-accent-danger-hover-val));
+
+
+      /* Icon Shape */
+      --icon-border-radius: 9999px; /* rounded */
+      
+      /* Transitions */
+      --transition-duration: 0.2s;
+    }
+    
+    html.dark {
+      --color-text: #f0f0f0;
+      --color-text-dim: #a0a0a0;
+      --color-bg: #121212;
+      --color-surface: #1e1e1e;
+      --color-surface-light: #2a2a2a;
+      --color-border: #3c3c3c;
+      --color-focus: #818cf8; /* Indigo-400 */
+    }
+
+    /* Icon Shapes */
+    html[data-icon-shape="squared"] { --icon-border-radius: 0.5rem; }
+    html[data-icon-shape="sharp"] { --icon-border-radius: 0; }
+    
+    /* Motion Reduction */
+    @media (prefers-reduced-motion: reduce) {
+      html:not([data-motion="on"]) *,
+      html:not([data-motion="on"]) *::before,
+      html:not([data-motion="on"]) *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    html[data-motion="off"] *,
+    html[data-motion="off"] *::before,
+    html[data-motion="off"] *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Base Styles */
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-display {
+      font-family: 'Lexend', sans-serif;
+    }
+
+    /* Animations */
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.5s ease-out forwards;
+    }
+    
+    @keyframes fade-in-backdrop {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes zoom-in-modal {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Dialog/Modal Styles */
+    .dialog-backdrop {
+      animation: fade-in-backdrop 0.2s ease-out forwards;
+    }
+    .dialog-panel {
+      animation: zoom-in-modal 0.2s ease-out forwards;
+    }
+
+    /* Text Shadow Utility */
+    .text-shadow-lg {
+        text-shadow: 0 4px 6px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.2);
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Disable Tailwind's default styles so we can use our own theming system
+    tailwind.config = { corePlugins: { preflight: false } }
+  </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

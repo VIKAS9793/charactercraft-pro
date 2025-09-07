@@ -1,0 +1,5 @@
+{
+  "name": "CharacterCraft Pro",
+  "description": "An AI-powered character consistency platform that leverages Gemini 2.5 Flash Image Preview (Nano Banana) to maintain perfect character identity across unlimited scenarios and contexts.",
+  "requestFramePermissions": []
+}
