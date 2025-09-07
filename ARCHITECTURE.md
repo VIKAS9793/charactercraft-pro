@@ -8,6 +8,10 @@ Our solution is an application architecture built upon the principles of a sophi
 
 ## Architectural Overview
 
+![CharacterCraft Pro Architecture Diagram](public/assets/Architecture.png)
+
+*Figure 1: High-level architecture of CharacterCraft Pro*
+
 The flow of data and logic is designed for precision and control:
 
 1.  **User Input**: The user provides a reference character image and a creative text prompt.
