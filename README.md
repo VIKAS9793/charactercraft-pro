@@ -4,6 +4,8 @@
 [![Tech Stack](https://img.shields.io/badge/Tech-React%20%7C%20TypeScript%20%7C%20Gemini-blueviolet)](https://ai.google.dev/)
 [![Status](https://img.shields.io/badge/Status-Active-success)]()
 
+![CharacterCraft Pro Banner](public/assets/Charactercraft%20pro.png)
+
 An AI-powered character consistency platform that leverages the **Gemini 2.5 Flash Image Preview (Nano Banana)** model to maintain perfect character identity across unlimited scenarios and contexts.
 
 CharacterCraft Pro solves the "holy grail" problem of AI image generation: maintaining exact character identity while dramatically changing environments, poses, lighting, and art styles.
@@ -25,9 +27,9 @@ CharacterCraft Pro solves the "holy grail" problem of AI image generation: maint
 
 ## 🚀 Live Demo
 
-*(Placeholder for a GIF demonstrating the app's workflow)*
+[![CharacterCraft Pro Demo](https://img.youtube.com/vi/rPISvyEFzcE/0.jpg)](https://youtu.be/rPISvyEFzcE?si=S5fnPlredt-cA7jL)
 
-![CharacterCraft Pro Demo GIF](https://i.imgur.com/placeholder.gif "CharacterCraft Pro Live Demo")
+Watch the demo on YouTube: [https://youtu.be/rPISvyEFzcE](https://youtu.be/rPISvyEFzcE?si=S5fnPlredt-cA7jL)
 
 ---
 
